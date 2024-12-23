@@ -21,10 +21,6 @@ class HomeViewModel  @Inject constructor(
     private val _uiState = MutableStateFlow<UiState>(UiState.Init)
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
-    init {
-        getProfile()
-    }
-
     fun resetState(){
         _uiState.value = UiState.Init
     }

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -40,6 +41,10 @@ fun HomeBody(modifier: Modifier = Modifier.fillMaxSize()) {
     ) {
         val viewModel: HomeViewModel = hiltViewModel()
         val uiState by viewModel.uiState.collectAsState()
+
+        LaunchedEffect(true) {
+            viewModel.getProfile()
+        }
 
         when(uiState){
             is UiState.Loading -> LoadingIndicator(

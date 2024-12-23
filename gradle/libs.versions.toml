@@ -10,7 +10,6 @@ lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.12.01"
 ksp = "2.0.0-1.0.24"
-room = "2.6.1"
 hilt = "2.52"
 okhttp3 = "4.12.0"
 retrofit = "2.11.0"
@@ -38,15 +37,12 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-ui-material-icons = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "materialIcons"  }
 
+#Nav Compose
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json",  version.ref = "kotlinxSerlization" }
+
+#Splash
 androidx-core-splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
-
-
-#ROOM
-androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
-androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
-androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 
 #HILT
 android-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -70,7 +66,6 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-android-room = { id = "androidx.room", version.ref = "room" }
 jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 

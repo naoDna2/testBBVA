@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.android.hilt)
-    alias(libs.plugins.android.room)
     alias(libs.plugins.jetbrainsKotlinSerialization )
 }
 
@@ -52,10 +51,6 @@ android {
         buildConfig = true
         compose = true
     }
-    room {
-        schemaDirectory("$projectDir/schemas")
-    }
-
 }
 
 dependencies {
@@ -78,15 +73,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation (libs.androidx.ui.material.icons)
 
+    //Navigation compose
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
-
-    //LOTTIE
-    implementation ("com.airbnb.android:lottie-compose:6.0.0")
-
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.ktx)
 
     //HILT
     implementation(libs.android.hilt)
